@@ -200,10 +200,9 @@
     if([args objectForKey:@"externalId"] != nil) {
        // user.externalID = [args objectForKey:@"externalId"];
     }
-    [self.commandDelegate runInBackground:^{
         [[Freshchat sharedInstance] setUser:user];
         [self callbackToJavascriptWithoutResultForCommand:command];
-    }];  
+   
 }
 
 - (void) updateUserProperties :(CDVInvokedUrlCommand*)command {
